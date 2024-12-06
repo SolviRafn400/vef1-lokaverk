@@ -1,0 +1,232 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Rokkitt', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-image: linear-gradient(to bottom, midnightblue, darkred); 
+    color: white;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    color: rgb(255, 166, 65);   
+} 
+header {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+header h1 {
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 -2px 8px rgb(255, 0, 0);
+    color: rgb(255, 166, 65);
+    font-size: 2.3rem;
+}
+iframe {
+    display: block;
+}
+main {
+    margin: 1rem;
+}
+a {
+    color: rgb(255, 166, 65);
+}
+a:visited {
+    columns: rgb(221, 45, 1);
+}
+a:hover, a:active {
+    columns: #000;
+    text-decoration: none;
+}
+.base-bg {
+    background-color: midnightblue;
+    background-image: linear-gradient(to bottom, midnightblue, royalblue, darkred);  
+    color: rgb(246, 226, 218);
+    padding: 0rem;
+}
+.mynd-bg {
+    background-color: midnightblue;
+    background-image: linear-gradient(to bottom, midnightblue, royalblue, darkred);
+}
+
+.col-2,
+.col-3,
+.col-3-myndir {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/****** standard IMG *********/
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+figure {
+    margin:0;
+}
+
+footer {
+    color: rgb(255, 166, 65);
+    padding: 1rem;
+}
+footer ul{
+    list-style: none;
+}
+a, footer a {
+    color: rgb(255, 166, 65);
+}
+footer a {
+    line-height: 1.5;
+}
+footer a:visited {
+    color: rgb(255, 81, 0);
+}
+footer a:active, .footer a:hover {
+    text-decoration: none;
+}
+blockquote {
+    background-color: rgba(0,0,0, 0.5);
+    padding: 2rem;
+}
+.copy {
+    text-align: center;
+}
+.innernav {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(253, 253, 253, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.innernav a:link {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: .4rem;
+    border-bottom: 1px solid white;
+}
+
+.innernav a:visited {
+    color: rgb(243, 224, 195);
+}
+.innernav a:hover,
+.innernav a:active{
+    color: orange;
+}
+.upp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    border: 1px solid;
+    border-radius: .6rem;
+    padding: 0 .4rem;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+#plotur {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Bilið milli platna */
+    justify-content: center;
+  }
+  
+  .album-grid article {
+    width: 48%; /* Tvær plötur hlið við hlið með smá bili */
+    max-width: 500px; /* Hámarksbreidd plötuhulstrar */
+  }
+  
+  iframe {
+    width: 100%; /* Láttu plötur aðlagast */
+    height: 352px;
+    border: none;
+    border-radius: 12px;
+  }
+
+@media screen and (min-width: 37.5rem) {
+    header h1 {
+        font-size: 2.5rem;
+        padding: 0 3rem;
+    }
+    .innernav {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    .innernav a:link {
+        border: 0;
+    }
+    .col-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:0 1rem; 
+    }
+}   
+/* ******** 48rem ********* */
+@media screen and (min-width:48rem) {
+    .col-2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        row-gap: 1rem;
+    }
+    .col-3-myndir {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+    header h1 {
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width:60rem) {
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        row-gap: 2rem;
+    }
+    .col-3-myndir {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+    }
+    .col-21 {
+        grid-template-columns: 2fr 1fr;
+        gap:2rem
+    }
+
+}
+@media screen and (min-width:80rem) {
+    body {
+        font-size: 1.4rem;
+    }
+    .container {
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width:100rem) {
+    .container {
+        max-width: 90rem;
+    }
+}
